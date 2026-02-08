@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  opacity: 0.7;
+}
+
+/* ADD TASK */
+.addTask {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  width: 260px;
+  outline: none;
+}
+
+button {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* BOARD */
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* COLUMN */
+.column {
+  background: #1e293b;
+  border-radius: 16px;
+  width: 320px;
+  min-height: 380px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.column h2 {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.count {
+  background: #38bdf8;
+  color: black;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* TASK */
+.task {
+  background: white;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.25s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.delete {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+/* DRAG */
+.drag-over {
+  background: #334155;
+}
+
+/* ANIM */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+}
